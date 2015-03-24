@@ -29,7 +29,7 @@ public class AdminController {
     Logger logger = LoggerFactory.getLogger(AdminController.class);
 
     @Value("${application.message:REST Fiddle}")
-    private String message = "REST Fiddle";
+    private String message = "SDO REST";
 
     @RequestMapping("/adminZone")
     public String home(Map<String, Object> model) {

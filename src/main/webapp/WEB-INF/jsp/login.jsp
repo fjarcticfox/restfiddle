@@ -1,11 +1,11 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="zh">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RESTFiddle</title>
+<title><spring:message code="project.name"/></title>
 <link rel="shortcut icon" href="/favicon.ico" />
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,24 +29,24 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">RESTFiddle</a>
+				<a class="navbar-brand" href="#"><spring:message code="project.name"/></a>
 			</div>
 		</div>
 	</div>
 	<div class="container-fluid">
 		<form class="form-signin" action='${pageContext.request.contextPath}/login' method='POST'>
-			<h2 class="form-signin-heading">RESTFiddle</h2>
+			<h2 class="form-signin-heading"><spring:message code="project.name"/></h2>
 
 			<div class="input-group" style="margin-bottom: 5px;">
 			  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-			  <input type="text" name="username" class="form-control" placeholder="Enter Email" required autofocus>
+			  <input type="text" name="username" class="form-control" placeholder="<spring:message code="input.uid.tip"/>" required autofocus>
 			</div>
 			<div class="input-group" style="margin-bottom: 5px;">
 			  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-			  <input type="password" name="password" class="form-control" style="margin-bottom: 0px;" placeholder="Enter Password" required>
+			  <input type="password" name="password" class="form-control" style="margin-bottom: 0px;" placeholder="<spring:message code="input.psw.tip"/>" required>
 			</div>			
 			
-			<button class="btn btn-primary btn-block" type="submit">Sign in to RESTFiddle</button>
+			<button class="btn btn-primary btn-block" type="submit"><spring:message code="button.login.name"/></button>
 		</form>
 	</div>
 

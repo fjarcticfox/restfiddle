@@ -1,3 +1,4 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <div class="col-xs-6 rf-col-3">
     <div id="projectRunnerSection">
         <div id="projectRunnerHeader">
@@ -49,61 +50,61 @@
         <div id="conversationHeader">
             <br>
             <div class="btn-group">
-                <button class="btn btn-primary btn-sm" id="run">Run</button>
+                <button class="btn btn-primary btn-sm" id="run"><spring:message code="label.run"/></button>
                 <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#comingSoon">Save and Run</a></li>
+                    <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#comingSoon"><spring:message code="label.save_and_run"/></a></li>
                 </ul>
             </div>
             &nbsp;&nbsp;
             <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" id="saveConversationBtn">Save</button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" id="saveConversationBtn"><spring:message code="label.save"/></button>
                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#" class="btn-sm" data-toggle="modal" id="saveAsConversationBtn">Save As</a></li>
+                    <li><a href="#" class="btn-sm" data-toggle="modal" id="saveAsConversationBtn"><spring:message code="label.save_as"/></a></li>
                 </ul>
             </div>
+<!--             &nbsp;&nbsp; -->
+<!--             <div class="btn-group"> -->
+<!--                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#assertsModal" id="manageAsserts">Asserts <span class="badge">0</span></button> -->
+<!--                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> -->
+<!--                     <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> -->
+<!--                 </button> -->
+<!--                 <ul class="dropdown-menu"> -->
+<!--                     <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#comingSoon">View Previous Results</a></li> -->
+<!--                 </ul> -->
+<!--             </div> -->
             &nbsp;&nbsp;
             <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#assertsModal" id="manageAsserts">Asserts <span class="badge">0</span></button>
+                <button type="button" class="btn btn-default btn-sm" id="clearRequest"><spring:message code="label.clear"/></button>
                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#comingSoon">View Previous Results</a></li>
-                </ul>
-            </div>
-            &nbsp;&nbsp;
-            <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm" id="clearRequest">Clear</button>
-                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#" class="btn-sm" id="clearBody">Clear Body</a></li>
-                    <li><a href="#" class="btn-sm" id="clearHeader">Clear Header</a></li>
-                    <li><a href="#" class="btn-sm" id="clearCookie">Clear Cookie</a></li>
-                    <li><a href="#" class="btn-sm" id="clearAuth">Clear Auth</a></li>
+                    <li><a href="#" class="btn-sm" id="clearBody"><spring:message code="label.clear.body"/></a></li>
+                    <li><a href="#" class="btn-sm" id="clearHeader"><spring:message code="label.clear.header"/></a></li>
+                    <li><a href="#" class="btn-sm" id="clearCookie"><spring:message code="label.clear.cookie"/></a></li>
+                    <li><a href="#" class="btn-sm" id="clearAuth"><spring:message code="label.clear.auth"/></a></li>
                 </ul>
             </div>
             &nbsp;&nbsp;
             <div class="btn-group">
                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-                    More&nbsp;&nbsp;<span class="caret"></span>
+                    <spring:message code="label.more"/>&nbsp;&nbsp;<span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li class="copyResponseList"><a href="#" class="btn-sm" id = "copyResponse">Copy Response</a></li>
-                    <li><a href="#" class="btn-sm" id="showLastResponse">Show Last Response</a></li>
+                    <li class="copyResponseList"><a href="#" class="btn-sm" id = "copyResponse"><spring:message code="label.response.copy"/></a></li>
+                    <li><a href="#" class="btn-sm" id="showLastResponse"><spring:message code="label.response.last"/></a></li>
                 </ul>
             </div>
-            &nbsp;&nbsp;&nbsp;
-            <button id="starNodeBtn" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-star"></span>&nbsp;Star
-            </button>
+<!--             &nbsp;&nbsp;&nbsp; -->
+<!--             <button id="starNodeBtn" class="btn btn-default btn-sm"> -->
+<!--                 <span class="glyphicon glyphicon-star"></span>&nbsp;Star -->
+<!--             </button> -->
             <button class="btn btn-default btn-sm pull-right right-pannel-toggle-btn" data-toggle="tooltip" data-placement="left">
                 <i id="full-screen-icon" class="fa fa-arrows-alt"></i>
             </button>
@@ -122,21 +123,20 @@
                 </div>
                 <div id="requestContainer">
                     <p id="apiRequestDescription"></p>
-                    <div class="btn-group label-btn-group">
-                        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-tags"></span> &nbsp;Tags&nbsp;<span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu label-dropdown-menu">
-                            <li>Select Tags</li>
-                            <li><input type="checkbox"  value="important" name ="importLabel" id="important-label-opt" checked><label for = "important-label-opt">Important</label></li>
+<!--                     <div class="btn-group label-btn-group"> -->
+<!--                         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> -->
+<!--                             <span class="glyphicon glyphicon-tags"></span> &nbsp;Tags&nbsp;<span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> -->
+<!--                         </button> -->
+<!--                         <ul class="dropdown-menu label-dropdown-menu"> -->
+<!--                             <li>Select Tags</li> -->
+<!--                             <li><input type="checkbox"  value="important" name ="importLabel" id="important-label-opt" checked><label for = "important-label-opt">Important</label></li> -->
 
-                            <li><input type ="checkbox" value = "wishlist"  name ="wishlistLabel" id="wishlist-label-opt" checked><label for="wishlist-label-opt">Wishlist</label></li>
-                        </ul>
-                    </div>
-                    <span class="label label-default important-label-opt">Important</span>&nbsp;<span class="label label-default wishlist-label-opt">Wishlist</span>
-
-                    <br>
-                    <br>
+<!--                             <li><input type ="checkbox" value = "wishlist"  name ="wishlistLabel" id="wishlist-label-opt" checked><label for="wishlist-label-opt">Wishlist</label></li> -->
+<!--                         </ul> -->
+<!--                     </div> -->
+<!--                     <span class="label label-default important-label-opt">Important</span>&nbsp;<span class="label label-default wishlist-label-opt">Wishlist</span> -->
+<!--                     <br> -->
+<!--                     <br> -->
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-2 rf-col-xs-2-padding" >

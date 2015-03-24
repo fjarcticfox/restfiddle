@@ -52,8 +52,8 @@ public class ApiScheduler {
 	//apiController.runProjectById(1l);
     }
 
-    @Scheduled(cron = "${cron.expression}")
+//    @Scheduled(cron = "${cron.expression}")
     public void reportCurrentTime() {
-	logger.debug("The time is now " + dateFormat.format(new Date()));
+//	logger.debug("The time is now " + dateFormat.format(new Date()));
     }
 }

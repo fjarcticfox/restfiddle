@@ -1,3 +1,4 @@
+	<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 	<!-- Modals -->
 	<div class="modal fade" id="assertsModal" tabindex="-1">
 		<div class="modal-dialog modal-lg">
@@ -11,8 +12,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="saveAssertsBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="saveAssertsBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -22,7 +23,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">New Entity</h4>
+					<h4 class="modal-title"><spring:message code="label.project.entity.new"/></h4>
 				</div>
 				<div class="modal-body">
 					<input type="text" id="newEntityName" class="form-control" placeholder="Enter Entity Name"> <br>
@@ -35,8 +36,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="createNewEntityBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="createNewEntityBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -46,15 +47,15 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">New Folder</h4>
+					<h4 class="modal-title" id="myModalLabel"><spring:message code="label.project.folder.new"/></h4>
 				</div>
 				<div class="modal-body">
 					<input type="text" id="folderId" class="form-control" placeholder="Enter Folder Name"> <br>
 					<textarea id="folderTextArea" class="form-control" rows="3" placeholder="Enter Description"></textarea>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="createNewFolderBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="createNewFolderBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -64,13 +65,13 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">New Request</h4>
+					<h4 class="modal-title" id="myModalLabel"><spring:message code="label.project.reqeust.new"/></h4>
 				</div>
 				<input type="hidden" class="form-control" id="source">
 				<div class="modal-body">
 					<div class="form-group">
-						<input class="form-control" id="requestName" placeholder="Enter Request Name"> <br>
-						<textarea id="requestTextArea" class="form-control" rows="3" placeholder="Enter Description"></textarea>
+						<input class="form-control" id="requestName" placeholder="<spring:message code="label.project.reqeust.name.tip"/>"> <br>
+						<textarea id="requestTextArea" class="form-control" rows="3" placeholder="<spring:message code="label.project.reqeust.desc.tip"/>"></textarea>
 					</div>
 					<!-- 
 					 <div class="form-group">
@@ -79,8 +80,8 @@
 				    </div> -->
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="createNewRequestBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="createNewRequestBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -100,8 +101,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="createNewSocketBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="createNewSocketBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -111,15 +112,15 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Update Profile</h4>
+					<h4 class="modal-title" id="myModalLabel"><spring:message code="label.profile.update"/></h4>
 				</div>
 				<div class="modal-body">
 					<input type="text" id="updateProfileName" class="form-control" placeholder="Enter Name"> <br>
 					<input type="text" id="updateProfileEmail" class="form-control" placeholder="Enter Email"> <br>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="updateProfileBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="updateProfileBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -129,16 +130,16 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Change Password</h4>
+					<h4 class="modal-title" id="myModalLabel"><spring:message code="label.password.change"/></h4>
 				</div>
 				<div class="modal-body">
-					<input type="text" id="oldPassword" class="form-control" placeholder="Enter Old Password"> <br>
-					<input type="password" id="newPassword" class="form-control" placeholder="Enter New Password"> <br>
-					<input type="password" id="retypedPassword" class="form-control" placeholder="Retype New Password"> <br>
+					<input type="text" id="oldPassword" class="form-control" placeholder="<spring:message code="label.password.old.tip"/>"> <br>
+					<input type="password" id="newPassword" class="form-control" placeholder="<spring:message code="label.password.new.tip"/>"> <br>
+					<input type="password" id="retypedPassword" class="form-control" placeholder="<spring:message code="label.password.retypenew.tip"/>"> <br>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="changePasswordBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="changePasswordBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -148,16 +149,16 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">New Collaborator</h4>
+					<h4 class="modal-title" id="myModalLabel"><spring:message code="label.collaborators.new"/></h4>
 				</div>
 				<div class="modal-body">
-					<input type="text" id="profileName" class="form-control" placeholder="Enter Name"> <br>
-					<input type="text" id="profileEmail" class="form-control" placeholder="Enter Email"> <br>
-					<input type="password" id="profilePassword" class="form-control" placeholder="Enter Password"> <br>
+					<input type="text" id="profileName" class="form-control" placeholder="<spring:message code="label.collaborators.name.tip"/>"> <br>
+					<input type="text" id="profileEmail" class="form-control" placeholder="<spring:message code="label.collaborators.email.tip"/>"> <br>
+					<input type="password" id="profilePassword" class="form-control" placeholder="<spring:message code="label.collaborators.password.tip"/>"> <br>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="createNewCollaboratorBtn">Save changes</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+					<button type="button" class="btn btn-primary" id="createNewCollaboratorBtn"><spring:message code="label.save"/></button>
 				</div>
 			</div>
 		</div>
@@ -167,7 +168,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Manage Collaborators</h4>
+					<h4 class="modal-title" id="myModalLabel"><spring:message code="label.collaborators.manage"/></h4>
 				</div>
 				<div class="modal-body">
 					<table class="table table-bordered">
@@ -196,7 +197,7 @@
 					</table>			
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
 				</div>
 			</div>
 		</div>
@@ -206,13 +207,13 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="workspaceModalLabel">New Workspace</h4>
+					<h4 class="modal-title" id="workspaceModalLabel"><spring:message code="label.workspace.new"/></h4>
 				</div>
 				<div class="modal-body">
 					<form id = "workspaceForm">
-						<input type="text" id="workspaceTextField" class="form-control" name ="workspaceName" placeholder="Enter Workspace Name" required>
+						<input type="text" id="workspaceTextField" class="form-control" name ="workspaceName" placeholder="<spring:message code="label.workspace.name"/>" required>
 						<p class="text-danger" id="workspace-error"></p> <br>
-						<textarea id="workspaceTextArea" class="form-control" rows="3" placeholder="Enter Description"></textarea>
+						<textarea id="workspaceTextArea" class="form-control" rows="3" placeholder="<spring:message code="label.workspace.desc"/>"></textarea>
 						<br>
 					</form>
 					<!-- 
@@ -227,8 +228,8 @@
 				-->
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="saveWorkspaceBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="saveWorkspaceBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -238,13 +239,13 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="projectModalLabel">New Project</h4>
+				<h4 class="modal-title" id="projectModalLabel"><spring:message code="label.project.new"/></h4>
 			</div>
 			<div class="modal-body">
 				<form id = "projectCreationForm">
-					<input type="text" id="projectTextField" class="form-control" name = "projectName" placeholder="Enter Project Name" required>
+					<input type="text" id="projectTextField" class="form-control" name = "projectName" placeholder="<spring:message code="label.project.name"/>" required>
 					<p class="text-danger" id="project-error"></p> <br> 
-					<textarea id="projectTextArea" class="form-control" rows="3" placeholder="Enter Description"></textarea>
+					<textarea id="projectTextArea" class="form-control" rows="3" placeholder="<spring:message code="label.project.desc"/>"></textarea>
 					<br>
 				</form>
 					<!-- 
@@ -258,8 +259,8 @@
 				-->
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="saveProjectBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="saveProjectBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -270,7 +271,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Import</h4>
+				<h4 class="modal-title"><spring:message code="label.import"/></h4>
 			</div>
 			<div class="modal-body">
 				<div class="alert alert-info">
@@ -281,8 +282,8 @@
 				<br>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="importFileBtn" type="button" class="btn btn-primary">Import</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="importFileBtn" type="button" class="btn btn-primary"><spring:message code="label.import"/></button>
 			</div>
 		</div>
 	</div>
@@ -293,15 +294,15 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Manage Environments</h4>
+				<h4 class="modal-title"><spring:message code="label.environments.manage"/></h4>
 			</div>
 			<div class="modal-body">
 				<div id="manageEnvironmentWrapper">
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="saveEnvironmentBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="saveEnvironmentBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -322,8 +323,8 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="saveTagBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="saveTagBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -333,7 +334,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="editNodeModalLabel">Edit Node</h4>
+				<h4 class="modal-title" id="editNodeModalLabel"><spring:message code="label.project.node.edit"/></h4>
 			</div>
 			<div class="modal-body">
 				<input type="hidden" id="editNodeId">
@@ -342,8 +343,8 @@
 				<br>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="editNodeBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="editNodeBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -353,7 +354,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="editProjectModalLabel">Edit Project</h4>
+				<h4 class="modal-title" id="editProjectModalLabel"><spring:message code="label.project.edit"/></h4>
 			</div>
 			<div class="modal-body">
 				<input type="hidden" id="editProjectId">
@@ -362,8 +363,8 @@
 				<br>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="editProjectBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="editProjectBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -382,8 +383,8 @@
 				<br>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="editTagBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="editTagBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -393,7 +394,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="editWorkspaceModalLabel">Edit Workspace</h4>
+				<h4 class="modal-title" id="editWorkspaceModalLabel"><spring:message code="label.workspace.edit"/></h4>
 			</div>
 			<div class="modal-body">
 				<input type="text" id="editWorkspaceTextField" class="form-control" placeholder="Enter Workspace Name"> <br>
@@ -401,8 +402,8 @@
 				<br>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button id="editWorkspaceBtn" type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button id="editWorkspaceBtn" type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>
@@ -412,14 +413,14 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Delete Workspace</h4>
+				<h4 class="modal-title" id="myModalLabel"><spring:message code="label.workspace.delete"/></h4>
 			</div>
 			<div class="modal-body">
 				Are You Sure You Want To Delete Current Workspace?
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-				<button type="button" class="btn btn-primary" id="deleteWorkspaceBtn">Yes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.no"/></button>
+				<button type="button" class="btn btn-primary" id="deleteWorkspaceBtn"><spring:message code="label.yes"/></button>
 			</div>
 		</div>
 	</div>
@@ -429,11 +430,11 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="projectModalLabel">Switch Workspace</h4>
+				<h4 class="modal-title" id="projectModalLabel"><spring:message code="label.workspace.switch"/></h4>
 			</div>
 			<div class="modal-body"></div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
 			</div>
 		</div>
 	</div>
@@ -443,15 +444,15 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Delete Node</h4>
+				<h4 class="modal-title" id="myModalLabel"><spring:message code="label.project.node.delete"/></h4>
 			</div>
 			<div class="modal-body">
 				<input type="hidden" id="deleteNodeId">
 				Are You Sure You Want To Delete Selected Node?
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-				<button type="button" class="btn btn-primary" id="deleteRequestBtn">Yes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.no"/></button>
+				<button type="button" class="btn btn-primary" id="deleteRequestBtn"><spring:message code="label.yes"/></button>
 			</div>
 		</div>
 	</div>
@@ -461,15 +462,15 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Delete Project</h4>
+				<h4 class="modal-title" id="myModalLabel"><spring:message code="label.project.delete"/></h4>
 			</div>
 			<div class="modal-body">
 				<input type="hidden" id="deleteProjectId">
 				Are You Sure You Want To Delete Selected Project?
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-				<button type="button" class="btn btn-primary" id="deleteProjectBtn">Yes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.no"/></button>
+				<button type="button" class="btn btn-primary" id="deleteProjectBtn"><spring:message code="label.yes"/></button>
 			</div>
 		</div>
 	</div>
@@ -486,8 +487,8 @@
 				Are You Sure You Want To Delete Selected Tag?
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-				<button type="button" class="btn btn-primary" id="deleteTagBtn">Yes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.no"/></button>
+				<button type="button" class="btn btn-primary" id="deleteTagBtn"><spring:message code="label.yes"/></button>
 			</div>
 		</div>
 	</div>
@@ -501,8 +502,8 @@
 			</div>
 			<div class="modal-body">UnsupportedOperationException("Not implemented yet")</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><spring:message code="label.close"/></button>
+				<button type="button" class="btn btn-primary"><spring:message code="label.save"/></button>
 			</div>
 		</div>
 	</div>

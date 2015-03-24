@@ -115,7 +115,7 @@
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
-			<version>6.0.0</version>
+			<version>6.0.3</version>
 			<exclusions>
 				<exclusion>
 					<groupId>eclipse</groupId>
@@ -125,7 +125,17 @@
 					<groupId>com.fasterxml.jackson.core</groupId>
 					<artifactId>jackson-annotations</artifactId>
 				</exclusion>
+				<exclusion>
+					<artifactId>olap4j</artifactId>
+					<groupId>org.olap4j</groupId>
+				</exclusion>
 			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.olap4j</groupId>
+			<artifactId>olap4j</artifactId>
+			<version>0.9.8.343</version>
 		</dependency>
 
 		<dependency>
@@ -140,7 +150,7 @@
 			<version>0.4</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.google.oauth-client</groupId>
 			<artifactId>google-oauth-client</artifactId>
@@ -168,9 +178,12 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin> <artifactId>maven-war-plugin</artifactId> <configuration> 
-				<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes> </configuration> 
-				</plugin> -->
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

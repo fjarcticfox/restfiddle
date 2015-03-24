@@ -1,3 +1,4 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -9,33 +10,33 @@
                     <span class='glyphicon glyphicon-align-justify'></span>
                 </button>
                 <ul class="dropdown-menu rf-menu-width">
-                    <li><a href="#" data-toggle="modal" data-target="#workspaceModal">New Workspace</a></li>
-                    <li><a href="#" id="switchWorkSpace" class="dummySwitchWorkspace">Switch Workspace</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#workspaceModal"><spring:message code="label.workspace.new"/></a></li>
+                    <li><a href="#" id="switchWorkSpace" class="dummySwitchWorkspace"><spring:message code="label.workspace.switch"/></a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-toggle="modal" data-target="#projectModal">New Project</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#projectModal"><spring:message code="label.project.new"/></a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-toggle="modal" data-target="#updateProfileModal">Update Profile</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#changePasswordModal">Change Password</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#updateProfileModal"><spring:message code="label.profile.update"/></a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#changePasswordModal"><spring:message code="label.password.change"/></a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-toggle="modal" id="manageEnvironments" data-target="#manageEnvironmentsModal">Manage Environments</a></li>
+                    <li><a href="#" data-toggle="modal" id="manageEnvironments" data-target="#manageEnvironmentsModal"><spring:message code="label.environments.manage"/></a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-toggle="modal" data-target="#collaboratorModal">New Collaborator</a></li>
-                    <li><a href="#" data-toggle="modal" id="manageUsersMenu" data-target="#manageCollaboratorsModal">Manage Collaborators</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#collaboratorModal"><spring:message code="label.collaborators.new"/></a></li>
+                    <li><a href="#" data-toggle="modal" id="manageUsersMenu" data-target="#manageCollaboratorsModal"><spring:message code="label.collaborators.manage"/></a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-toggle="modal" data-target="#comingSoon">Global Settings</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#comingSoon"><spring:message code="label.global.setting"/></a></li>
                 </ul>
             </div>
-            <a class="navbar-brand" href="#">RESTFiddle</a>
+            <a class="navbar-brand" href="#"><spring:message code="project.name"/></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://www.restfiddle.com/" target="_blank">About</a></li>
-                <li><a href="https://github.com/ranjan-rk/restfiddle" target="_blank">GitHub</a></li>
-                <li><a href="http://restfiddle.blogspot.com/" target="_blank">Blog</a></li>
-                <li><a href="https://github.com/ranjan-rk" target="_blank">Contact</a></li>
+<!--                 <li><a href="http://www.restfiddle.com/" target="_blank">About</a></li> -->
+<!--                 <li><a href="https://github.com/ranjan-rk/restfiddle" target="_blank">GitHub</a></li> -->
+<!--                 <li><a href="http://restfiddle.blogspot.com/" target="_blank">Blog</a></li> -->
+<!--                 <li><a href="https://github.com/ranjan-rk" target="_blank">Contact</a></li> -->
                 <li>
                     <form action="/logout">
-                        <button class="btn btn-link rf-btn-margin" type="submit">Logout</button>
+                        <button class="btn btn-link rf-btn-margin" type="submit"><spring:message code="button.logout.name"/></button>
                     </form>
                 </li>
             </ul>

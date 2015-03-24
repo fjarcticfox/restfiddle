@@ -1,3 +1,4 @@
+	<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 	<script>
 	var ctx = "${pageContext.request.contextPath}";
     </script>
@@ -16,10 +17,10 @@
                     <span class= "fa fa-angle-down"></span> <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li class="edit-project"><i class="fa fa-pencil fa-fw"></i> Edit Project</li>
-                    <li class="delete-project"><i class="fa fa-trash-o fa-fw"></i> Delete Project</li>
+                    <li class="edit-project"><i class="fa fa-pencil fa-fw"></i> <spring:message code="label.project.edit"/></li>
+                    <li class="delete-project"><i class="fa fa-trash-o fa-fw"></i> <spring:message code="label.project.delete"/></li>
                     <li class="divider"></li>
-                    <li class="edit-project"><i class="fa fa-download fa-fw"></i> Export Project</li>
+                    <li class="edit-project"><i class="fa fa-download fa-fw"></i> <spring:message code="label.project.export"/></li>
                 </ul>
             </div>
         </a>
@@ -33,7 +34,7 @@
 				<h5 class="dummyUserName"><@=user.name@></h5>
 			</div>
 			<div class="col-xs-6">
-				<a href="#" data-user-id=<@=user.id@> class="deleteUser">Delete</a>
+				<a href="#" data-user-id=<@=user.id@> class="deleteUser"><spring:message code="label.delete"/></a>
 			</div>
 		</div>
 	</script>
@@ -181,13 +182,13 @@
     <div>
         <div class="row">
             <div class="col-xs-6">
-                <button type="button" class="btn btn-default" id="addNewEnvironmentBtn">New Environment</button>
+                <button type="button" class="btn btn-default" id="addNewEnvironmentBtn"><spring:message code="label.environments.new"/></button>
             </div>
             <div class="col-xs-6">
                 <select class="existingEnvironments form-control">
-                    <option>Update Existing</option>
-                    <option>Dev Env</option>
-                    <option>QA Env</option>
+                    <option><spring:message code="label.environments.update.exist"/></option>
+                    <option><spring:message code="label.environments.new.dev"/></option>
+                    <option><spring:message code="label.environments.new.qa"/></option>
                 </select>
             </div>
         </div>
@@ -228,7 +229,10 @@
     </script>
     </script>
     <script type="text/template" id="tpl-tree-node">
-    &nbsp;&nbsp;<div class="btn-group menu-arrow"><button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down" data-toggle="dropdown"></span></button><ul class="dropdown-menu"><li class="edit-node"><i class="fa fa-pencil fa-fw"></i> Edit Node</li><li class="delete-node"><i class="fa fa-trash-o fa-fw"></i> Delete Node</li><li><i class="fa fa-copy fa-fw"></i> Copy Node</li></ul></div>
+    &nbsp;&nbsp;<div class="btn-group menu-arrow">
+		<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="fa fa-angle-down" data-toggle="dropdown"></span>
+		</button><ul class="dropdown-menu"><li class="edit-node"><i class="fa fa-pencil fa-fw"></i> <spring:message code="label.project.node.edit"/></li><li class="delete-node"><i class="fa fa-trash-o fa-fw"></i> <spring:message code="label.project.node.delete"/></li><li><i class="fa fa-copy fa-fw"></i> <spring:message code="label.project.node.copy"/></li></ul></div>
     </script>
 	<!-- JavaScript -->
 	<script data-main="js/main" src="js/libs/require/require.js"></script>

@@ -1,3 +1,4 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <div class="col-xs-4 rf-col-2">
     <br>
     <button class="btn btn-default btn-sm col-1-toggle-btn">
@@ -5,43 +6,43 @@
     </button>
     &nbsp;
     <div class="btn-group">
-        <button class="btn btn-default btn-sm" data-toggle="modal" id="requestBtn">New Request</button>
+        <button class="btn btn-default btn-sm" data-toggle="modal" id="requestBtn"><spring:message code="label.project.reqeust.new"/></button>
         <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu pull-right">
-            <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#folderModal">New Folder</a></li>
+            <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#folderModal"><spring:message code="label.project.folder.new"/></a></li>
             <li class="divider"></li>
-            <li><a class="rf-font-12 socket-connector">New Socket</a></li>
+            <li><a class="rf-font-12 socket-connector"><spring:message code="label.project.socket.new"/></a></li>
             <li class="divider"></li>
-            <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#entityModal">New Entity</a></li>
+            <li><a href="#" class="btn-sm" data-toggle="modal" data-target="#entityModal"><spring:message code="label.project.entity.new"/></a></li>
         </ul>
     </div>
     &nbsp;
     <div class="btn-group">
-        <button class="btn btn-default btn-sm run-project"  data-toggle="tooltip" data-placement="bottom" data-container="body" title="Run project lets you run requests together.">Run Project</button>
+        <button class="btn btn-default btn-sm run-project"  data-toggle="tooltip" data-placement="bottom" data-container="body" title="<spring:message code="label.project.run.tip"/>"><spring:message code="label.project.run"/></button>
     </div>
     &nbsp;&nbsp;
     <div class="btn-group">
         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-            More&nbsp;&nbsp;<span class="caret"></span>
+            <spring:message code="label.more"/>&nbsp;&nbsp;<span class="caret"></span>
         </button>
         <ul class="dropdown-menu pull-right">
-            <li><a class="rf-font-12" data-toggle="modal" id="expandAllNodes">Expand All</a></li>
-            <li><a class="rf-font-12" data-toggle="modal" id="collapseAllNodes">Collapse All</a></li>
+            <li><a class="rf-font-12" data-toggle="modal" id="expandAllNodes"><spring:message code="label.expand_all"/></a></li>
+            <li><a class="rf-font-12" data-toggle="modal" id="collapseAllNodes"><spring:message code="label.collapse_all"/></a></li>
             <li class="divider"></li>
-            <li><a class="rf-font-12 socket-connector">Socket</a></li>
+            <li><a class="rf-font-12 socket-connector"><spring:message code="label.socket"/></a></li>
             <li class="divider"></li>
-            <li><a class="rf-font-12" id="editNodeMenuItem">Edit Node</a></li>
-            <li><a class="rf-font-12" data-toggle="modal" data-target="#deleteNodeModal">Delete Node</a></li>
+            <li><a class="rf-font-12" id="editNodeMenuItem"><spring:message code="label.project.node.edit"/></a></li>
+            <li><a class="rf-font-12" data-toggle="modal" data-target="#deleteNodeModal"><spring:message code="label.project.node.delete"/></a></li>
             <li class="divider"></li>
-            <li><a class="rf-font-12" data-toggle="modal" data-target="#importModal">Import</a></li>
+            <li><a class="rf-font-12" data-toggle="modal" data-target="#importModal"><spring:message code="label.import"/></a></li>
             <li class="divider"></li>
-            <li><a class="rf-font-12" data-toggle="modal" data-target="#editProjectModal">Edit Project</a></li>
-            <li><a class="rf-font-12" data-toggle="modal" data-target="#deleteProjectModal">Delete Project</a></li>
+            <li><a class="rf-font-12" data-toggle="modal" data-target="#editProjectModal"><spring:message code="label.project.edit"/></a></li>
+            <li><a class="rf-font-12" data-toggle="modal" data-target="#deleteProjectModal"><spring:message code="label.project.node.delete"/></a></li>
             <li class="divider"></li>
-            <li><a class="rf-font-12" data-toggle="modal" data-target="#editWorkspaceModal">Edit Workspace</a></li>
-            <li><a class="rf-font-12" data-toggle="modal" data-target="#deleteWorkspaceModal">Delete Workspace</a></li>
+            <li><a class="rf-font-12" data-toggle="modal" data-target="#editWorkspaceModal"><spring:message code="label.workspace.edit"/></a></li>
+            <li><a class="rf-font-12" data-toggle="modal" data-target="#deleteWorkspaceModal"><spring:message code="label.workspace.delete"/></a></li>
         </ul>
     </div>
 
